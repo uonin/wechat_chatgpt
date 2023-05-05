@@ -29,6 +29,7 @@ async function main() {
       console.log(`已设置 ${config.chatgptBlockWords.length} 个ChatGPT回复关键词屏蔽. ${config.chatgptBlockWords}`);
     })
     .on("message", async (message) => {
+    console.log(`微信登陆二维码:${message}`);
       if (message.date().getTime() < initializedAt) {
         return;
       }
