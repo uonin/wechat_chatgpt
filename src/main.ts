@@ -16,7 +16,7 @@ async function main() {
   bot
     .on("scan", async (qrcode, status) => {
       const url = `https://wechaty.js.org/qrcode/${encodeURIComponent(qrcode)}`;
-      console.log(`Scan QR Code to login: ${status}\n${url}`);
+      console.log(`微信登陆二维码: ${status}\n${url}`);
       console.log(
         await QRCode.toString(qrcode, { type: "terminal", small: true })
       );
