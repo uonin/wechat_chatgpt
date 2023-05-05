@@ -284,6 +284,7 @@ export class ChatGPTBot {
     }
     if (this.triggerGPTMessage(rawText, privateChat)) {
       const text = this.cleanMessage(rawText, privateChat);
+      console.log(`🤵 triggerGPTMessage: ${talker} 💬 Text: ${text}`)
       if (privateChat) {
         return await this.onPrivateMessage(talker, text);
       } else{
